@@ -13,8 +13,9 @@
 #   example_gene_table.xlsx   the same table as an Excel file
 #   MyCtValues.xlsx           raw qPCR Ct values
 #
-# Everything is in AllINeed.zip. Unzip it into one folder, then point R at
-# that folder (Session > Set Working Directory > To Source File Location).
+# Everything is in RCourse_20260921.zip, on the Releases page of the repo
+# linked above. Unzip it, then point R at the folder it creates
+# (Session > Set Working Directory > To Source File Location).
 # =============================================================================
 
 
@@ -51,6 +52,9 @@ banana * 3
 # "=" also assigns. Both work, but "<-" is the R convention and it is what
 # you will see in almost every script and textbook.
 youcanchooseyourownname = 5
+
+# You can print it anytime
+youcanchooseyourownname
 
 # Names are yours to choose. Choose ones your future self will understand.
 2 * 5
@@ -273,7 +277,8 @@ myGeneTable_fromXLSX[, "Treated_mean"] <- rowMeans(myGeneTable_fromXLSX[, c("Tre
 
 # Base R can plot straight away. It is quick, it is ugly, and it is
 # perfectly fine for a first look at your own data.
-plot(myGeneTable_fromXLSX$Control_mean, myGeneTable_fromXLSX$Treated_mean,
+plot(x = myGeneTable_fromXLSX$Control_mean,
+     y = myGeneTable_fromXLSX$Treated_mean,
      xlab = "Control (mean)",
      ylab = "Treated (mean)",
      main = "Per-gene means (base R)",
@@ -562,7 +567,8 @@ myGeneTable_fromXLSX$FDR_forPlot <- ifelse(myGeneTable_fromXLSX$FDR == 0,
                                            smallest_nonzero_FDR / 2,
                                            myGeneTable_fromXLSX$FDR)
 
-EnhancedVolcano(myGeneTable_fromXLSX,
+# Lets save the plot into a variable, as sometimes it fails due to the size
+p <- EnhancedVolcano(myGeneTable_fromXLSX,
                 lab = rownames(myGeneTable_fromXLSX),
                 x = "log2FC",
                 y = "FDR_forPlot",      # FDR, with exact zeros floored
@@ -580,7 +586,8 @@ EnhancedVolcano(myGeneTable_fromXLSX,
                 boxedLabels = FALSE
 )
 
-
+# Now we can save the plot to the disk using a distinct strategy!
+ggplot2::ggsave("volcano.png", p, width = 10, height = 8, dpi = 300)
 
 # -----------------------------------------------------------------------------
 # Heatmaps
@@ -702,6 +709,7 @@ runExample()
 # Read the source of any of them - this prints the folder they live in:
 system.file("examples", "01_hello", package = "shiny")
 
+# Now go to this place and open the file in RStudio!
 
 # How would OUR bar plot become an app? Every Shiny app has the same two
 # halves, and our code already contains both:

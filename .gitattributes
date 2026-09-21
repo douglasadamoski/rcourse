@@ -1,0 +1,17 @@
+# Store text with LF in the repository, whatever the editor wrote locally.
+# Without this, saving the script on Windows shows up as a whole-file change.
+* text=auto
+
+*.R    text
+*.md   text
+*.csv  text
+
+*.pptx binary
+*.xlsx binary
+*.zip  binary
+*.png  binary
+*.jpg  binary
+*.svg  text
+
+# The archived editions are kept exactly as they were taught and distributed.
+archive/** -text

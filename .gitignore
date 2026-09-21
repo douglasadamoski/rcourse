@@ -1,0 +1,17 @@
+# Windows and macOS folder junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# R session leftovers
+.Rhistory
+.RData
+.Rproj.user/
+
+# Output produced by running the course script
+MyPlots/
+MyFirstPlot.svg
+My_qPCR.xlsx
+volcano.png
+Rplots.pdf

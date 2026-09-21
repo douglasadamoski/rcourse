@@ -36,9 +36,9 @@ R is the engine, RStudio is the dashboard you actually sit in front of.
 
 Then download the course files:
 
-1. Download **[`AllINeed.zip`](AllINeed.zip)** from this repository
-   (click the file, then the download button).
-2. Unzip it into one folder. Keep all the files together.
+1. Download **`RCourse_20260921.zip`** from the
+   [latest release](https://github.com/douglasadamoski/rcourse/releases/latest).
+2. Unzip it. It creates a folder with everything inside, already together.
 3. Open `RCourse_20260921.R` in RStudio.
 4. Tell R where that folder is: **Session → Set Working Directory → To Source
    File Location**. Skipping this step is the single most common reason the
@@ -56,10 +56,13 @@ few minutes, so if you can run those lines before the course starts, please do.
 | `RCourse_20260921.R` | The script we work through, line by line. Heavily commented — it is meant to be readable months later. |
 | `RCourse_20260921.pptx` | The slides. |
 | `example_gene_table.csv` | A small RNA-seq-like result table: 30 genes, 3 controls, 3 treated, fold change and FDR. |
-| `example_gene_table.xlsx` | The same table as an Excel file, to practise reading both formats. |
+| `example_gene_table.xlsx` | The same table as an Excel file, to practice reading both formats. |
 | `MyCtValues.xlsx` | Raw qPCR Ct values in the long format instruments export. |
-| `AllINeed.zip` | All of the above in one download. |
-| `archive/2025-09-29/` | The previous edition, kept as taught. |
+| `archive/2025-09-29/` | The previous edition, kept exactly as taught. |
+
+The one-file download for each edition is attached to its
+[release](https://github.com/douglasadamoski/rcourse/releases), not committed here:
+`RCourse_20260921.zip` and `RCourse_20250929.zip`.
 
 ---
 
@@ -143,8 +146,8 @@ without fuss.
 
 | Edition | Tag | Notes |
 |---|---|---|
-| 21 September 2026 | [`v20260921`](https://github.com/douglasadamoski/rcourse/releases/tag/v20260921) | Added Shiny; rewrote the script comments; fixed the bugs that stopped the 2025 script running end to end. |
-| 29 September 2025 | [`v20250929`](https://github.com/douglasadamoski/rcourse/releases/tag/v20250929) | First edition. Files kept under `archive/2025-09-29/`. |
+| 21 September 2026 | [`v20260921`](https://github.com/douglasadamoski/rcourse/releases/tag/v20260921) | `RCourse_20260921.zip` · Added Shiny; rewrote the script comments; fixed the bugs that stopped the 2025 script running end to end. |
+| 29 September 2025 | [`v20250929`](https://github.com/douglasadamoski/rcourse/releases/tag/v20250929) | `RCourse_20250929.zip` · First edition. Files kept under `archive/2025-09-29/`. |
 
 ---
 
