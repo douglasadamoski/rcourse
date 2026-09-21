@@ -1,3 +1,6 @@
+# Direct download link:
+[Course package](https://github.com/douglasadamoski/rcourse/releases/download/v20260921/RCourse_20260921.zip)
+
 # Introduction to R
 
 A one-day, hands-on introduction to R for people who work with biological data
